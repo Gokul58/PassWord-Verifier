@@ -1,5 +1,7 @@
 ﻿using System;
 
+// Code for password verifier
+
 namespace password
 {
     class PasswordVerifier
@@ -21,58 +23,58 @@ namespace password
         static void UpperCase(string password)
         {
             int uppercasecounter = 0;
-            foreach(char c in password)
+            foreach (char c in password)
             {
-                if(c >= 'A' && c <= 'Z')
+                if (c >= 'A' && c <= 'Z')
                 {
-                    uppercasecounter++;  
+                    uppercasecounter++;
                 }
             }
 
-            if(uppercasecounter == 0)
+            if (uppercasecounter == 0)
             {
                 Console.WriteLine("no uppercase found");
                 System.Environment.Exit(1);
 
-            } 
+            }
         }
         static void LowerCase(string password)
         {
             int lowercasecounter = 0;
-            foreach(char c in password)
+            foreach (char c in password)
             {
-                if(c >= 'a' && c <= 'z')
+                if (c >= 'a' && c <= 'z')
                 {
-                    lowercasecounter++;  
+                    lowercasecounter++;
                 }
             }
 
-            if(lowercasecounter == 0)
+            if (lowercasecounter == 0)
             {
                 Console.WriteLine("no lowercase found");
                 System.Environment.Exit(1);
 
             }
-            
-        }
 
+        }
         static void ContainsNumber(string password)
         {
             int numbercounter = 0;
-            foreach(char c in password)
+            foreach (char c in password)
             {
-                if(c >= '0' && c <= '9')
+                if (c >= '0' && c <= '9')
                 {
                     numbercounter++;
                 }
             }
 
-            if(numbercounter == 0)
+            if (numbercounter == 0)
             {
                 Console.WriteLine("there are no digits in the password");
                 System.Environment.Exit(1);
-            } 
+            }
         }
+
         static void Main(string[] args)
         {
             string password = "HFLWHE547a";
